@@ -112,7 +112,7 @@ async def generate_code(request: CodeRequest):
         raise HTTPException(status_code=500, detail="Error generating code: " + str(e))
 
 # Define the /summarize endpoint
-@app.post("/summarize/")
+@app.post("/summarize")
 async def summarize(request: SummarizeRequest):
     try:
         # Check if youtube_url is valid and extract the video ID
